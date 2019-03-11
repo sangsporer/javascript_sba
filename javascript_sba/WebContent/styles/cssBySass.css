@@ -1,0 +1,76 @@
+/*-----------------------------------------------------------------------------
+Global
+----------------------------------------------------------------------------------  */
+html {
+  box-sizing: border-box;
+}
+html body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+html body .container {
+  display: flex;
+  flex-direction: column;
+}
+html body .container header {
+  background: #011627;
+  color: #f9f9f9;
+  text-align: center;
+}
+html body .container header .title-wrap {
+  max-width: 950px;
+  padding: 20px;
+  overflow: auto;
+}
+html body .container header .title-wrap h1 {
+  font-family: "Roboto Slab", serif;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+html body .container .main-and-sidebar-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+html body .container .main-and-sidebar-wrapper .main {
+  flex: 3;
+  background: #f9f9f9;
+  padding: 20px;
+  color: #333333;
+}
+html body .container .main-and-sidebar-wrapper .main input[type=text], html body .container .main-and-sidebar-wrapper .main select, html body .container .main-and-sidebar-wrapper .main textarea {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+html body .container .main-and-sidebar-wrapper .main input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+html body .container .main-and-sidebar-wrapper .main input[type=submit]:hover {
+  background-color: #45a049;
+}
+html body .container .main-and-sidebar-wrapper .sidebar {
+  flex: 1;
+  background: #2ec4b6;
+  padding: 20px;
+  color: #333333;
+}
+html body .container .main-and-sidebar-wrapper .sidebar h2 {
+  text-align: center;
+}
+html body .container footer {
+  background: #011627;
+  color: #f9f9f9;
+  text-align: center;
+}
+
+/*# sourceMappingURL=cssBySass.css.map */

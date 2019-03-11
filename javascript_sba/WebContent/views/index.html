@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|
+			Roboto:400,400i,700,700i"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.7.2/css/
+			all.css"
+	integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../styles/main.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+            <div><img src="../images/MEF-Logo.jpeg"></div>
+            <h1>
+                Morris Educational Foundation Scholarships</h1>
+			<div class="navbar">
+				<a href="index.html">Home</a>
+				<div class="dropdown">
+					<button class="dropbtn">
+						Login <i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-content">
+                        <a href="login2.html">Login</a> 
+                        <a href="newUser2.html">New User</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropbtn">
+						Reports <i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-content">
+                        <a href="scholarships.html">Scholarships</a>  
+                        <a href="winners.html">Receipients</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropbtn">
+						Forms <i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-content">
+                        <a href="school.html">School Information</a> 
+                        <a href="payment.html">Payment Request</a>
+					</div>
+				</div>
+				
+				
+			</div>
+
+
+		</header>
+		<div class="main-and-sidebar-wrapper">
+			<section class="main">
+                <h2>Click on the UP, DOWN, LEFT, RIGHT buttons to see our Scholarhips in ACTION!</h2>
+				<img id = "myImage" src = "../images/scholarship4.jpg" heigth= "100px" width = "100px"/>           
+  <div style="text-align:center;width:480px;">
+  <button id= 'KeyA'>UP</button><br><br><button id= 'KeyW'>LEFT</button>
+  <button id = 'KeyD'>RIGHT</button><br><br><button id= 'KeyS'>DOWN</button>
+ </div>   
+			</section>
+			<aside class="sidebar">
+				<h2>Current List of Scholarhips</h2>
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+					<li>Nulla sed arcu ut lacus euismod dictum. Quisque nec mi in
+						nulla</li>
+					<li>egestas accumsan sed vitae turpis. Quisque elementum neque
+						a</li>
+					<li>vestibulum pulvinar. Nullam sagittis ipsum vitae commodo</li>
+					<li>scelerisque. Donec at odio ac erat feugiat convallis.
+						Vestibulum a</li>
+				</ul>
+			</aside>
+		</div>
+		<footer>
+			<div class="content-wrap">
+				<h2>Let's Keep in Touch!</h2>
+
+				<!-- Social media links. Add or remove any networks. -->
+				<div class=contact-info>
+					<a href="mailto:sangsporer@gmail.com">sangsporer@gmail.com</a> <a
+						href="https://twitter.com/sangsporer"><i
+						class="fab fa-twitter"></i></a> <a
+						href="https://www.linkedin.com/in/sang-sporer-82866922/"><i
+						class="fab fa-linkedin"></i></a> <a href="http://fb.me/sangsporer"><i
+						class="fab fa-facebook"></i></a>
+				</div>
+
+				<p>Copyright 2019 by Sang Sporer</p>
+			</div>
+
+
+		</footer>
+	</div>
+</body>
+<script>
+   var animate;
+   const buttons = document.querySelectorAll('button');
+   for(var i=0; i< buttons.length;i++){
+   buttons[i].addEventListener('click',
+     function() {
+   var direction= event.target.id;
+   animate = setInterval( function() { moveImage(direction); }, 60 ); 
+     });
+     document.addEventListener('mouseup',function() {clearInterval(animate);});
+     }
+   function moveImage(direction) {
+      if(direction==='KeyD'){imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';};
+      if(direction==='KeyW'){imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px';};
+      if(direction==='KeyA'){imgObj.style.top = parseInt(imgObj.style.top) - 10 + 'px';};
+      if(direction==='KeyS'){imgObj.style.top = parseInt(imgObj.style.top) + 10 + 'px';}
+      };      
+function init() {
+      imgObj = document.getElementById('myImage');
+      imgObj.style.position= 'relative';  
+      imgObj.style.left = '0px'; imgObj.style.top = '0px';};
+      window.onload = init;
+   </script>
+</html>

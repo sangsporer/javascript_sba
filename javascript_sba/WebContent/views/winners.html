@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Scholarship Receipients</title>
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|
+			Roboto:400,400i,700,700i"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.7.2/css/
+			all.css"
+	integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../styles/main.css">
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+            <div><img src="../images/MEF-Logo.jpeg"></div>
+            <h1>
+                Morris Educational Foundation Scholarships</h1>
+			<div class="navbar">
+				<a href="index.html">Home</a>
+				<div class="dropdown">
+					<button class="dropbtn">
+						Login <i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-content">
+                        <a href="login.html">Login</a> 
+                        <a href="newUser.html">New User</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropbtn">
+						Reports <i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-content">
+                        <a href="scholarships.html">Scholarships</a>  
+                        <a href="reciepients.html">Receipients</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropbtn">
+						Forms <i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-content">
+                        <a href="flexbox.html">School Information</a> 
+                        <a href="flexbox2.html">Reimbursement Request</a>
+					</div>
+				</div>
+				
+				
+			</div>
+
+
+		</header>
+		<div class="main-and-sidebar-wrapper">
+			<section class="main">
+				<h2>Scholarship Receipients</h2>
+				<table id="scholarships">
+					<tr>
+						<th>Scholarship</th>
+						<th>Receipient</th>
+                        <th>School</th>
+                        <th>Year</th>
+					</tr>
+				</table>
+			</section>
+			<aside class="sidebar">
+				<h2>Current List of Scholarhips</h2>
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+					<li>Nulla sed arcu ut lacus euismod dictum. Quisque nec mi in
+						nulla</li>
+					<li>egestas accumsan sed vitae turpis. Quisque elementum neque
+						a</li>
+					<li>vestibulum pulvinar. Nullam sagittis ipsum vitae commodo</li>
+					<li>scelerisque. Donec at odio ac erat feugiat convallis.
+						Vestibulum a</li>
+				</ul>
+			</aside>
+		</div>
+		<footer>
+			<div class="content-wrap">
+				<h2>Let's Keep in Touch!</h2>
+
+				<!-- Social media links. Add or remove any networks. -->
+				<div class=contact-info>
+					<a href="mailto:sangsporer@gmail.com">sangsporer@gmail.com</a> <a
+						href="https://twitter.com/sangsporer"><i
+						class="fab fa-twitter"></i></a> <a
+						href="https://www.linkedin.com/in/sang-sporer-82866922/"><i
+						class="fab fa-linkedin"></i></a> <a href="http://fb.me/sangsporer"><i
+						class="fab fa-facebook"></i></a>
+				</div>
+
+				<p>Copyright 2019 by Sang Sporer</p>
+			</div>
+
+
+		</footer>
+    </div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+
+
+
+$(document).ready(function(){
+     var id = [];
+     var scholarship = [];
+     var reciepient = [];
+     var school = [];
+     var year = [];
+
+     for(i=1; i<=10; i++){
+       id[i] = i;
+       scholarship[i] = "Scholarship "+i;
+       reciepient[i] = "Reciepient "+i;
+       school[i]="school "+1;
+       year[i]="2018";
+        $("#scholarships").append("<tr><td>" +scholarship[i]+"</td><td>" +reciepient[i]+"</td><td>" +school[i]+"</td><td>" +year[i]+"</td></tr>");
+    }
+
+    $("select").change(function(){
+        var selectedOption = $(this).find(":selected").val();
+        alert("You have selected - " + selectedOption);
+    });
+});
+</script>
+</body>
+</html>

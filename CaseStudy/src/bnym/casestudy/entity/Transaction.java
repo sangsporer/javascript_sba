@@ -63,6 +63,14 @@ public class Transaction {
 //		this = description;
 //	}
 
+	public String getDetail() {
+		return detail;
+	}
+
+	public void setDetail(String detail) {
+		this.detail = detail;
+	}
+
 	public Transaction() {
 		super();
 		// TODO Auto-generated constructor stub

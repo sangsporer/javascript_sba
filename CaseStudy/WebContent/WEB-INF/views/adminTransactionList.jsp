@@ -18,8 +18,7 @@
 		</div>
 
 
-		<div class="container col-sm-8 col-sm-offset-2"
-			style="margin-top: 50px">
+		<div class="container" style="margin-top: 50px">
 			<h2 class="text-center text-primary">Transactions</h2>
 
 			<div>
@@ -37,6 +36,7 @@
 						<th>To/From</th>
 						<th>Amount</th>
 						<th>Balance</th>
+						<th>Notes</th>
 
 						<th>Edit</th>
 						<th>Remove</th>
@@ -46,7 +46,8 @@
 					<c:forEach items="${transactionList}" var="transaction">
 						<tr>
 							<td>${transaction.id}</td>
-							<td>${transaction.date}</td>
+							<td><fmt:formatDate value="${transaction.date}"
+									dateStyle="short" /></td>
 							<td>${transaction.type}</td>
 							<td>${transaction.toOrFrom}</td>
 							<td><fmt:formatNumber value="${transaction.amount}"
@@ -54,6 +55,7 @@
 
 							<td><fmt:formatNumber value="${transaction.balance}"
 									type="currency" /></td>
+							<td>${transaction.detail }</td>
 
 							<td><a
 								href="${pageContext.request.contextPath }/editTransaction/${transaction.id}"

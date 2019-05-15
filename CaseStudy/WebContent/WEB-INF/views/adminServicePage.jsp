@@ -9,12 +9,12 @@
 			<i class="fas fa-users-cog color-primary" aria-hidden="true"></i> Admin Service Page</h2>
 			<p> You have successfully logged on as Admin</p>
 
-			<form action="/CaseStudy/userList">
+			<form action="/CaseStudy/userList" method="POST">
 				<button type="submit" class="btn-lg btn-primary" style="margin-top: 20px" >Users</button>
 			</form>
 			<form action="/CaseStudy/adminScholarshipList" method="POST">
 				<button type="submit" class="btn-lg btn-primary" style="margin-top: 20px">Scholarships</button>
-			</form>
+			</form>	
 
 		</div>
 	</div>

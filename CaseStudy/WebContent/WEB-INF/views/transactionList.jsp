@@ -7,7 +7,7 @@
 
 		<div class="container text-center" style="margin-top: 50px">
 			<h1 class="text-center text-primary text-uppercase">${scholarship.name}</h1>
-			> <br>
+			<br>
 			<h3>
 				<fmt:formatNumber maxFractionDigits="0" value="${scholarship.size}"
 					type="currency" />
@@ -18,7 +18,7 @@
 		</div>
 
 
-		<div class="container col-sm-8 col-sm-offset-2"
+		<div class="container"
 			style="margin-top: 50px">
 			<h2 class="text-center text-primary">Transactions</h2>
 
@@ -41,8 +41,11 @@
 							<td><fmt:formatDate value="${transaction.date}" dateStyle="short" /></td>
 							<td>${transaction.type}</td>
 							<td>${transaction.toOrFrom}</td>
-							<td>${transaction.amount}</td>
-							<td>${transaction.balance}</td>
+							<td><fmt:formatNumber value="${transaction.amount}"
+									type="currency" /></td>
+
+							<td><fmt:formatNumber value="${transaction.balance}"
+									type="currency" /></td>
 
 						</tr>
 					</c:forEach>

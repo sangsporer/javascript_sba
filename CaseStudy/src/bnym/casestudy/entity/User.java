@@ -6,6 +6,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class User {
@@ -34,10 +35,16 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	
+	@NotEmpty (message = "Enter email")
 	private String email;
+	@NotEmpty (message = "Enter password")
 	private String password;
+	@NotEmpty (message = "Confirm password")
 	private String confirmPassword;
+	@NotEmpty (message = "Enter full name")
 	private String name;
+	@NotEmpty (message = "Select role")
 	@Enumerated(EnumType.STRING)
 	private Role role; // ADMIN, TRUSTEE, DONOR
 	

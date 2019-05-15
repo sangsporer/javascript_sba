@@ -4,7 +4,7 @@
 	<div class="container bg-light">
 		<div class="row">
 
-			<div class="container col-sm-8 col-sm-offset-2"
+			<div class="container col-sm-10 col-sm-offset-1"
 				style="margin-top: 50px">
 				<h2 class="text-center text-primary"><i class="fas fa-users"></i>  User List</h2>
 				<form action="/CaseStudy/newUser">

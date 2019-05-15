@@ -2,7 +2,9 @@
 <%@ include file="common/navigation.jspf"%>
 
 <div class="container col-sm-4 col-sm-offset-4" style="margin-top: 50px">
-	<h2 class="text-center text-primary"> <i class="fas fa-university"></i> New Scholarship</h2>
+	<h2 class="text-center text-primary">
+		<i class="fas fa-university"></i> New Scholarship
+	</h2>
 	<form:form action="addScholarship" method="POST"
 		modelAttribute="scholarship">
 
@@ -10,6 +12,7 @@
 			<label for="name">Name</label>
 			<form:input type="text" class="form-control" id="name"
 				placeholder="Enter name" path="name" />
+			<small> <form:errors path="name" cssClass="errormsg" /></small>
 		</div>
 
 		<div class="form-group">
@@ -19,12 +22,14 @@
 					<form:option value="${type}">${type.description}</form:option>
 				</c:forEach>
 			</form:select>
+			<small> <form:errors path="type" cssClass="errormsg" /></small>
 		</div>
 
 		<div class="form-group">
 			<label for="size">Size</label>
 			<form:input type="number" class="form-control" id="size"
 				placeholder="Enter Size" path="size" />
+			<small> <form:errors path="size" cssClass="errormsg" /></small>
 		</div>
 
 

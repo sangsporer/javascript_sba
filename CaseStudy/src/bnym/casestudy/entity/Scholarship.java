@@ -13,6 +13,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Scholarship {
@@ -39,9 +41,12 @@ public class Scholarship {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	@NotEmpty(message = "Enter scholarship name")
 	private String name;
+	@NotEmpty
 	@Enumerated(EnumType.STRING)
 	private Type type;
+	@NotNull
 	private BigDecimal size;
 	private String detail;
 	

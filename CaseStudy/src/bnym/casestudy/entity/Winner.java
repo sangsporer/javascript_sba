@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Winner {
@@ -16,8 +18,11 @@ public class Winner {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	@NotEmpty(message = "Enter full name")
 	private String name;
+	@NotEmpty(message = "Enter school name")
 	private String school;
+	@NotNull(message = "Enter graduation year")
 	private Date year;
 
 	@ManyToOne(cascade = CascadeType.PERSIST)

@@ -15,12 +15,14 @@
 						<form:option value="${scholarship}">${scholarship.id}</form:option>
 					</c:forEach>
 				</form:select>
+				<small> <form:errors path="scholarship" cssClass="errormsg" /></small>
 			</div>	
 
 			<div class="form-group">
 				<label for="name">Name</label>
 				<form:input type="text" class="form-control" id="name"
 					placeholder="Enter name" path="name"></form:input>
+					<small> <form:errors path="name" cssClass="errormsg" /></small>
 				
 			</div>
 
@@ -29,6 +31,7 @@
 				
 				<form:input type="text" class="form-control" id="school"
 					placeholder="Enter school" path="school" />
+					<small> <form:errors path="school" cssClass="errormsg" /></small>
 					
 			</div>
 
@@ -37,6 +40,7 @@
 				
 				<form:input type="date" class="form-control" id="year"
 					placeholder="Enter year" path="year" />
+					<small> <form:errors path="year" cssClass="errormsg" /></small>
 					
 			</div>
 

@@ -7,7 +7,7 @@
 
 		<div class="container text-center" style="margin-top: 50px">
 			<h1 class="text-center text-primary text-uppercase">${scholarship.name}</h1>
-			> <br>
+			 <br>
 			<h3>
 				<fmt:formatNumber maxFractionDigits="0" value="${scholarship.size}"
 					type="currency" />

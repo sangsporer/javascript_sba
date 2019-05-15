@@ -6,19 +6,25 @@
 
 
 		<div class="container text-center" style="margin-top: 50px">
-			<h1 class="text-center text-primary text-uppercase">${scholarship.name}</h1>>
-			<br>
+			<h1 class="text-center text-primary text-uppercase">${scholarship.name}</h1>
+			> <br>
 			<h3>
 				<fmt:formatNumber maxFractionDigits="0" value="${scholarship.size}"
 					type="currency" />
 			</h3>
 			<h3>${scholarship.detail}</h3>
 
-			
+
 		</div>
-		
+
+		<div>
+			<a
+				href="${pageContext.request.contextPath }/transactionList/${scholarship.id}"
+				class="btn btn-success" style="margin: 20px">Transactions</a>
+		</div>
+
 		<div class="container">
-		<h2 class="text-primary">Recipients</h2>
+			<h2 class="text-primary">Recipients</h2>
 			<table class="table table-hover">
 				<thead>
 					<tr>
@@ -41,13 +47,9 @@
 				</tbody>
 			</table>
 
-			
-				<div>
-					<a
-						href="${pageContext.request.contextPath }/transactionList/${scholarship.id}"
-						class="btn btn-success" style="margin: 20px">Transaction List</a>
-				</div>
-			
+
+
+
 
 
 		</div>

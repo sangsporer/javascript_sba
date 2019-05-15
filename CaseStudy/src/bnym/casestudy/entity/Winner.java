@@ -19,6 +19,7 @@ public class Winner {
 	private String name;
 	private String school;
 	private Date year;
+
 	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "scholarship_id")
 	private Scholarship scholarship;

@@ -22,12 +22,6 @@
 			style="margin-top: 50px">
 			<h2 class="text-center text-primary">Transactions</h2>
 
-			<div>
-				<a
-					href="${pageContext.request.contextPath }/scholarship/${scholarship.id}/newTransaction"
-					class="btn btn-success" style="margin: 20px">New Transaction</a>
-			</div>
-			
 			<table class="table table-hover">
 				<thead>
 					<tr>
@@ -38,26 +32,18 @@
 						<th>Amount</th>
 						<th>Balance</th>
 
-						<th>Edit</th>
-						<th>Remove</th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach items="${transactionList}" var="transaction">
 						<tr>
 							<td>${transaction.id}</td>
-							<td>${transaction.date}</td>
+							<td><fmt:formatDate value="${transaction.date}" dateStyle="short" /></td>
 							<td>${transaction.type}</td>
 							<td>${transaction.toOrFrom}</td>
 							<td>${transaction.amount}</td>
 							<td>${transaction.balance}</td>
 
-							<td><a
-								href="${pageContext.request.contextPath }/editTransaction/${transaction.id}"
-								class="btn btn-warning">Edit</a></td>
-							<td><a
-								href="${pageContext.request.contextPath }/deleteTransaction/${transaction.id}"
-								class="btn btn-danger">Delete</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

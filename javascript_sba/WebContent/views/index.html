@@ -13,13 +13,26 @@
 	integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
 	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="../styles/main.css">
+
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8"
+	src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#table_id').DataTable();
+	});
+</script>
 </head>
 <body>
 	<div class="container">
 		<header>
-            <div><img src="../images/MEF-Logo.jpeg"></div>
-            <h1>
-                Morris Educational Foundation Scholarships</h1>
+			<div>
+				<img src="../images/MEF-Logo.jpeg">
+			</div>
+			<h1>Morris Educational Foundation Scholarships</h1>
 			<div class="navbar">
 				<a href="index.html">Home</a>
 				<div class="dropdown">
@@ -27,8 +40,8 @@
 						Login <i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-content">
-                        <a href="login2.html">Login</a> 
-                        <a href="newUser2.html">New User</a>
+						<a href="login2.html">Login</a> <a href="newUser2.html">New
+							User</a>
 					</div>
 				</div>
 				<div class="dropdown">
@@ -36,8 +49,8 @@
 						Reports <i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-content">
-                        <a href="scholarships.html">Scholarships</a>  
-                        <a href="winners.html">Receipients</a>
+						<a href="scholarships.html">Scholarships</a> <a
+							href="winners.html">Receipients</a>
 					</div>
 				</div>
 				<div class="dropdown">
@@ -45,24 +58,32 @@
 						Forms <i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-content">
-                        <a href="school.html">School Information</a> 
-                        <a href="payment.html">Payment Request</a>
+						<a href="school.html">School Information</a> <a
+							href="payment.html">Payment Request</a>
 					</div>
 				</div>
-				
-				
+
+
 			</div>
 
 
 		</header>
+
+
 		<div class="main-and-sidebar-wrapper">
 			<section class="main">
-                <h2>Click on the UP, DOWN, LEFT, RIGHT buttons to see our Scholarhips in ACTION!</h2>
-				<img id = "myImage" src = "../images/scholarship4.jpg" heigth= "100px" width = "100px"/>           
-  <div style="text-align:center;width:480px;">
-  <button id= 'KeyA'>UP</button><br><br><button id= 'KeyW'>LEFT</button>
-  <button id = 'KeyD'>RIGHT</button><br><br><button id= 'KeyS'>DOWN</button>
- </div>   
+				<h2>Click on the UP, DOWN, LEFT, RIGHT buttons to see our
+					Scholarhips in ACTION!</h2>
+				<img id="myImage" src="../images/scholarship4.jpg" heigth="100px"
+					width="100px" />
+				<div style="text-align: center; width: 480px;">
+					<button id='KeyA'>UP</button>
+					<br> <br>
+					<button id='KeyW'>LEFT</button>
+					<button id='KeyD'>RIGHT</button>
+					<br> <br>
+					<button id='KeyS'>DOWN</button>
+				</div>
 			</section>
 			<aside class="sidebar">
 				<h2>Current List of Scholarhips</h2>
@@ -76,6 +97,25 @@
 					<li>scelerisque. Donec at odio ac erat feugiat convallis.
 						Vestibulum a</li>
 				</ul>
+
+				<table id="table_id" class="display">
+					<thead>
+						<tr>
+							<th>Column 1</th>
+							<th>Column 2</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Row 1 Data 1</td>
+							<td>Row 1 Data 2</td>
+						</tr>
+						<tr>
+							<td>Row 2 Data 1</td>
+							<td>Row 2 Data 2</td>
+						</tr>
+					</tbody>
+				</table>
 			</aside>
 		</div>
 		<footer>
@@ -100,26 +140,42 @@
 	</div>
 </body>
 <script>
-   var animate;
-   const buttons = document.querySelectorAll('button');
-   for(var i=0; i< buttons.length;i++){
-   buttons[i].addEventListener('click',
-     function() {
-   var direction= event.target.id;
-   animate = setInterval( function() { moveImage(direction); }, 60 ); 
-     });
-     document.addEventListener('mouseup',function() {clearInterval(animate);});
-     }
-   function moveImage(direction) {
-      if(direction==='KeyD'){imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';};
-      if(direction==='KeyW'){imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px';};
-      if(direction==='KeyA'){imgObj.style.top = parseInt(imgObj.style.top) - 10 + 'px';};
-      if(direction==='KeyS'){imgObj.style.top = parseInt(imgObj.style.top) + 10 + 'px';}
-      };      
-function init() {
-      imgObj = document.getElementById('myImage');
-      imgObj.style.position= 'relative';  
-      imgObj.style.left = '0px'; imgObj.style.top = '0px';};
-      window.onload = init;
-   </script>
+	var animate;
+	const buttons = document.querySelectorAll('button');
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].addEventListener('click', function() {
+			var direction = event.target.id;
+			animate = setInterval(function() {
+				moveImage(direction);
+			}, 60);
+		});
+		document.addEventListener('mouseup', function() {
+			clearInterval(animate);
+		});
+	}
+	function moveImage(direction) {
+		if (direction === 'KeyD') {
+			imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+		}
+		;
+		if (direction === 'KeyW') {
+			imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px';
+		}
+		;
+		if (direction === 'KeyA') {
+			imgObj.style.top = parseInt(imgObj.style.top) - 10 + 'px';
+		}
+		;
+		if (direction === 'KeyS') {
+			imgObj.style.top = parseInt(imgObj.style.top) + 10 + 'px';
+		}
+	};
+	function init() {
+		imgObj = document.getElementById('myImage');
+		imgObj.style.position = 'relative';
+		imgObj.style.left = '0px';
+		imgObj.style.top = '0px';
+	};
+	window.onload = init;
+</script>
 </html>

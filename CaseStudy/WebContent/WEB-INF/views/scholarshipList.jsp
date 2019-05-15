@@ -12,10 +12,10 @@
 			<table class="table table-hover">
 				<thead>
 					<tr>
-						<th>ID</th>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Size</th>
+						<td>ID</td>
+						<td>Name</td>
+						<td>Type</td>
+						<td>Size</td>
 					</tr>
 				</thead>
 				<tbody>

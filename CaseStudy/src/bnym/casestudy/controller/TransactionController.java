@@ -25,7 +25,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import bnym.casestudy.entity.Scholarship;
 import bnym.casestudy.entity.Transaction;
-import bnym.casestudy.entity.Winner;
 import bnym.casestudy.service.ScholarshipService;
 import bnym.casestudy.service.TransactionService;
 
@@ -90,9 +89,24 @@ public class TransactionController {
 		
 	}
 	
+//================donor and trustee views=============
+	
+	// view of all transactions
+		@RequestMapping(value = "/transactionList/{id}", method = RequestMethod.GET)
+		public ModelAndView transactionList(@PathVariable Long id) {
+			ModelAndView mav = new ModelAndView("transactionList");
+			Scholarship scholarship = scholarshipService.getScholarshipById(id);
+			Collection<Transaction> transactionList = scholarship.getTransactions();
+			mav.addObject("scholarship", scholarship);
+			mav.addObject("transactionList", transactionList);
+			return mav;
+		}
+	
 	
 //=================views not linked to scholarship======================
 	// view all transactions
+	
+	
 	@RequestMapping("/transactionList")
 	public ModelAndView transactionList() {
 		ModelAndView mav = new ModelAndView("transactionList");

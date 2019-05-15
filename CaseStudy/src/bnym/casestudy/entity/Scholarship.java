@@ -46,11 +46,12 @@ public class Scholarship {
 	private String detail;
 	
 	
-//	@OneToMany(fetch=FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval=true)
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "scholarship" )
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "scholarship", fetch = FetchType.EAGER, orphanRemoval = true)
+//	@OneToMany(cascade = CascadeType.ALL, mappedBy = "scholarship" )
 	private Collection<Winner> winners = new LinkedHashSet<>();
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "scholarship", fetch = FetchType.EAGER, orphanRemoval = true)
+//	@OneToMany(cascade = CascadeType.ALL, mappedBy = "scholarship", fetch = FetchType.EAGER, orphanRemoval = true)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "scholarship" )
 	private Collection<Transaction> transactions = new LinkedHashSet<>();
 
 //	public Scholarship(Long id, String name, Type type, BigDecimal size, Integer term) {

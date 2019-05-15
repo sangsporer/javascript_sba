@@ -8,12 +8,12 @@
 		Trustee Login
 	</h2>
 	<br>
-	<form>
+	<form action="/CaseStudy/trusteeLogin" method="POST">
 		<div class="input-group">
 			<div class="input-group-prepend">
 				<span class="input-group-text"><i class="fa fa-envelope color-primary"></i></span>
 			</div>
-			<input type="email" name="" class="form-control"
+			<input type="email" name="email" class="form-control"
 				placeholder="email" />
 		</div>
 		
@@ -22,7 +22,7 @@
 			<div class="input-group-prepend">
 				<span class="input-group-text"><i class="fa fa-key icon"></i></span>
 			</div>
-			<input type="password" name="" class="form-control"
+			<input type="password" name="password" class="form-control"
 				placeholder="password" />
 		</div>
 		<br>
